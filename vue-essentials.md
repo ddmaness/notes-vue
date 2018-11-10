@@ -81,5 +81,10 @@ async or expensive operations when data changes
 
 ## Class and Style Bindings
 
+To avoid the hassle of error prone string concatenation Vue provides special behavior for `class` and inline styles declared
+through `v-bind`
+
+passing an object to `v-bind:class` can allow for conditional classes declarations. these can exist alongside standard class
+definitions. these objects don't have to be inline and can even be returned by a computed property that returns a class object.
 
 
