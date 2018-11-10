@@ -87,4 +87,19 @@ through `v-bind`
 passing an object to `v-bind:class` can allow for conditional classes declarations. these can exist alongside standard class
 definitions. these objects don't have to be inline and can even be returned by a computed property that returns a class object.
 
+Arrays can also be used. Classes can be toggled with a ternary operator element, or by simply using the object syntax as an
+array element (less verbose)
 
+any classes or class bindings added a custom component will be added to the root of the component and will not overide classes declared when that component is invoked
+
+a similar process exists for declaring inline styles. Refer to documentation if needed.
+
+## Conditional Rendering
+
+the `v-if` and `v-else` directives are used to achieve conditional rendering. if a group of elements are conditional, the
+directive must be attached to an invisible `<template>` wrapper that conditionally displays everything within it.  `v-else`
+elements must immediately follow `v-if` or `v-else-if` statements or else they will be ignored. the `v-show` directive is 
+similar to `v-if` but only toggles the elements `display` property in css. if something is going to be toggled frequently,
+use `v-show` else use `v-if`
+
+## List Rendering
