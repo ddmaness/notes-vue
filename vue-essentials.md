@@ -152,12 +152,19 @@ A component's data option must be a function. To ensure that each maintains its 
 
 Components can be registered either locally or globally (available for use in all other components)
 
-data can be passed down to components as props
+data can be passed down to components as props. once a prop is registered it can be passed data through a custom attribute
 
+`v-bind` can be used to dynamically pass props in a `v-for` loop from the data property.
 
+like in React every component may only have a single root element.  Use wrappers as needed.
 
+The `$emit` method is used to pass the name of an event up to the parent component. `v-on` can then be used in the parent
+component to listen for the emitted event. This works kind of like message passing. `$emit`'s second parameter is optionally
+used to pass along a value, which will be accessable as either `$event` or as the first parameter on a method
 
+`<slot>` elements are used to pass content into a component
 
+dynamically switching components is made possible with the `is` special attribute
 
 
 
